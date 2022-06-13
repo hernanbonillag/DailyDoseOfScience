@@ -1,0 +1,55 @@
+
+
+
+
+
+
+
+<!-- News -->
+<section id="category_section" class="category_section">
+    <div class="container">
+    <div class="row">
+    <div class="col-md-8">
+    <div class="category_section mobile">
+        <div class="article_title header_purple">
+            <h2><a href="category.html" target="_self">CriptoNews</a></h2>
+        </div>
+        <!----article_title------>
+        <div class="category_article_wrapper">
+            <% if(noticias != ''){ %>
+                <% noticias.forEach(function(noticia, index){%>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="top_article_img">
+                        <a href="single.html" target="_self"><img class="img-responsive"
+                                                                   src="<%- noticia.imagen %>" alt="feature-top">
+                        </a>
+                    </div>
+                    <!----top_article_img------>
+                </div>
+                <div class="col-md-6">
+                    <span class="tag purple">Cripto</span>
+    
+                    <div class="category_article_title">
+                        <h2><a href="<%- noticia.url %>" target="_self"><%-noticia.titulo%></a></h2>
+                    </div>
+                    <!----category_article_title------>
+                    <div class="category_article_date"><a href="#"><%-noticia.fecha%></a>, by: <a href="#"><%- noticia.autor%></a></div>
+                    <!----category_article_date------>
+                    <div class="category_article_content">
+                        <%-noticia.resena%>
+                    </div>
+                    <!----category_article_content------>
+                    <!----media_social------>
+                </div>
+            </div>
+        </div>
+        <%})%>
+        <%}%>
+        <p class="divider"><a href="#">More News&nbsp;&raquo;</a></p>
+    </div>
+    <!-- Mobile News Section -->
+    
+
+    
+    
